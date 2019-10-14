@@ -7,6 +7,7 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Cart from './components/cart/Cart';
 import Details from './components/layout/Details'
+import Modal from './components/layout/Modal'
 
 import './App.css';
 
@@ -21,8 +22,11 @@ const App = () => (
 		  <Route exact path='/details' component={Details} />	  
           <Route exact path='/cart' component={Cart} />
 	      </Switch>
+		  <Modal/>
 	    </section>
+		
 	  </Fragment>
+
   </Router>
 );
 

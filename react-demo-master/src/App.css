@@ -47,9 +47,14 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
-  background-color:lightgoldenrodyellow;
+  
+  
   
 }
+
+#modal{
+  background:var(--mainwhite);
+  height: 30%;}
 
 /* Text Styles*/
 .x-large {
