@@ -7,7 +7,7 @@ export const storeProducts = [
       company: "GOOGLE",
       info:
       "google Pixel 3 smartphone runs on Android v9.0 (Pie) operating system. The phone is powered by Octa core (2.5 GHz, Quad core, Kryo 385 + 1.6 GHz, Quad core, Kryo 385) processor.",
-      inCart: true,
+      inCart: false,
       count: 0,
       total: 0
     },
