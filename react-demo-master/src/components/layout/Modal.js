@@ -26,7 +26,7 @@ class Modal extends Component{
                                  <h5>item added to cart</h5>
                                 <img src={img} className="img-fluid" alt="product"></img>
                                 <h5>{title}</h5>
-                                <h5 className="text-muted">{price}:rs</h5>
+                                <h5 className="text-muted"><i class="fa fa-inr" aria-hidden="true"></i> {price}</h5>
                           
                     <Link to='/'>
                         <ButtonContainer onClick={()=>closeModal()}>

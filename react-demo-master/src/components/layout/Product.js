@@ -75,7 +75,7 @@ Product.propTypes={
         id:PropTypes.number,
         img:PropTypes.string,
         title:PropTypes.string,
-        price:PropTypes.string,
+        price:PropTypes.number,
         inCart:PropTypes.bool
     }).isRequired
 }

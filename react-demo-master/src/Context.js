@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { storeProducts, detailProduct } from "./data";
 
+
 const ProductContext = React.createContext();
 //provider
 //consumer
@@ -9,7 +10,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart:storeProducts,
+    cart:[],
     modalOpen:false,
     modalProduct:detailProduct,
     CartSubTotal:0,
@@ -56,7 +57,7 @@ class ProductProvider extends Component {
     this.setState(()=>{
       return{products:tempProducts,cart:[...this.state.cart,product]};
     },()=>{
-      console.log(this.state);
+      this.addTotals();
     });
   };
 
@@ -72,8 +73,17 @@ class ProductProvider extends Component {
        return{modalOpen:false}
      });
   }
-  increment=(id)=>{
-    console.log('this is increment method');
+  increment=id=>{
+    let tempCart=[this.state.cart];
+    const selectedProduct=tempCart.find(item=>item.id===id)
+    
+    const index=tempCart.indexOf(selectedProduct);
+    const product=tempCart[index];
+    
+    product.count=product.count + 1;
+    product.total=product.count * product.price;
+
+    this.setState(()=>{return{cart:[...tempCart]}},()=>{this.addTotals()})
   }
 
   decrement=(id)=>{
@@ -81,11 +91,52 @@ class ProductProvider extends Component {
   }
 
   removeitem=(id)=>{
-    console.log("item removed");
+    let tempProducts=[...this.state.products];
+    let tempcart=[...this.state.cart]
+
+    tempcart=tempcart.filter(item=>item.id!==id);
+    const index=tempProducts.indexOf(this.getItem(id))
+    let removeProduct=tempProducts[index];
+    removeProduct.inCart=false;
+    removeProduct.count=0;
+    removeProduct.total=0;
+
+    this.setState(()=>{
+      return{
+        cart:[...tempcart],
+        products:[...tempProducts]
+      }
+    },()=>{
+      this.addTotals();
+    })
   }
 
   clearCart=()=>{
-    console.log('clear');
+    this.setState(()=>{
+      return{cart:[]}
+    },()=>{
+      this.setProducts();
+      this.addTotals();
+    })
+  }
+
+  addTotals=()=>{
+    let subTotal=0;
+    this.state.cart.map(item=>(subTotal+=item.total));
+    const tempTax=subTotal * 0.1;
+    const tax=parseFloat(tempTax.toFixed(2));
+    const total=subTotal + tax
+     
+    console.log(total)
+    console.log(tax)
+    console.log(total)
+    this.setState(()=>{
+      return{
+        CartSubTotal:subTotal,
+        CartTax:tax,
+        CartTotal:total
+      }
+    })
   }
   /* tester=()=>{
  
