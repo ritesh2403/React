@@ -15,16 +15,16 @@ const App = () => (
 	<Router>
 	  <Fragment>
 	    <Navbar />
-	    
+
 	    <section className='container'>
 	      <Switch>
 		  <Route exact path='/' component={Productlist} />
-		  <Route exact path='/details' component={Details} />	  
+		  <Route exact path='/details' component={Details} />
           <Route exact path='/cart' component={Cart} />
 	      </Switch>
 		  <Modal/>
 	    </section>
-		
+
 	  </Fragment>
 
   </Router>

@@ -9,23 +9,23 @@ class Product extends Component
     {
         const{id,title,img,price,inCart}=this.props.product;
         return(
-            
+
             < ProductWrapper className="col-12 mx-auto col-md-3 col-lg-4 my-4  ">
           <div className="card">
-            
+
             <ProductConsumer>{
-              (value)=>( 
+              (value)=>(
                 <div className="img-container p-5 " onClick={()=>
                   value.handleDetail(id)
                 }>
-                 
+
                  <Link to="/details">
                      <img src={img} alt="product" className="card-img-top">
 
                      </img>
                  </Link>
-                 
-                 <button className="cart-btn" 
+
+                 <button className="cart-btn"
                  disabled={inCart?true:false}
                   onClick={()=>{
                     value.addToCart(id);
@@ -36,28 +36,28 @@ class Product extends Component
                     {" "}
                     in cart
                     </p>):
-                    (<i class="fa fa-shopping-cart"></i>)}
-                   
+                    (<i className="fa fa-shopping-cart"></i>)}
+
                 </button>
           </div>
 
               )
             }
-            
+
             </ProductConsumer>
 
-             
-          
-          
-          
-          
+
+
+
+
+
             {/* cart footer*/}
-            
+
             <div className="card-footer d-flex justify-content-between">
                  <p className="align-self-between mb-0">{title}</p>
 
                  <h5 className="text-blue font-italic mb=0">
-             <span  className="mr-1"><i class="fa fa-inr" aria-hidden="true"></i></span>
+             <span  className="mr-1"><i className="fa fa-inr" aria-hidden="true"></i></span>
              {price}
              </h5>
 
@@ -66,7 +66,7 @@ class Product extends Component
             </div>
 
          </ ProductWrapper>
-         
+
         );
     }
 }
@@ -87,9 +87,9 @@ const ProductWrapper=styled.div`
 
     border:0.1rem dotted  rgb(100, 82, 82);
     transition: all 1s linear;
-  
+
    }
-  
+
    .card-footer{
      background:transparent;
      border-top: transparent;
@@ -101,28 +101,28 @@ const ProductWrapper=styled.div`
         box-shadow: 2px,2px,5px,0px rgba(0,0,0,0.2);
 
        }
-   } 
+   }
    .card-footer{
      background: rgba(247,247,247);
    }
    .img-container{
      position: relative;
      overflow: hidden;
-     
-  
+
+
    }
-  
+
    .img-container:hover .card-img-top{
      transform: scale(1.2);
    }
-  
+
    .card-img-top{
-  
+
     transition: all 1s linear;
    }
-  
+
    .cart-btn{
-  
+
     position: absolute;
     bottom: 0;
     right:0;
@@ -135,11 +135,11 @@ const ProductWrapper=styled.div`
     transform: translate(150% ,125%);
     transition: all 1s linear;
    }
-  
+
    .cart-btn-hover{
      transform: translate(0,0);
    }
-  
+
    .img-container:hover .cart-btn{
        transform:translate(0,0);
    }

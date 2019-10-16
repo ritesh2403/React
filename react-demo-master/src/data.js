@@ -106,10 +106,10 @@ export const storeProducts = [
       inCart: false,
       count: 0,
       total: 0
-      
+
     }
   ];
-  
+
   export const detailProduct = {
     id: 1,
     title: "Google Pixel - Black",
