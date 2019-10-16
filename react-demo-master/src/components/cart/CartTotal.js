@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+
 export default function CartTotal({value}) {
     const {CartSubTotal,CartTax,CartTotal,clearCart}=value;
     return (
@@ -33,6 +34,14 @@ export default function CartTotal({value}) {
                             </span>
                             <strong><i class="fa fa-inr" aria-hidden="true"></i> {CartTotal}</strong>
                         </h5>
+                          
+                          <Link to="/checkout">
+                           <h5>
+                            <span className="text-title">
+                            </span>
+                            <button className="btn btn-outline-success text-uppercase mb-3 px-5" type="button" onClick={()=>clearCart()} ><i class="fa fa-money" aria-hidden="true"></i>Checkout</button>
+                            </h5>
+                        </Link>
                     </div>
                 </div>
              </div>
