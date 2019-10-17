@@ -5,7 +5,7 @@ import { ProductConsumer } from "../../Context";
 import EmptyCart from './EmptyCart'
 import CartList from './CartList'
 import CartTotal from './CartTotal'
-
+//main cart component to passed data to children 
 class Cart extends Component {
   render() {
     return (
@@ -13,6 +13,7 @@ class Cart extends Component {
         <ProductConsumer>
           {value => {
             const { cart } = value;
+            /*{checking if cart is empty or not.if not empty rendering it to  other specfic pages}*/
             if (cart.length > 0)
               return (
                 <React.Fragment>

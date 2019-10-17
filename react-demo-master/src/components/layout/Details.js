@@ -55,6 +55,7 @@ class Details extends Component {
                       <ButtonContainer>back to product</ButtonContainer>
                     </Link>
 
+                    {/* checking if product is added in cart on detail page if not addtocart functionality is called*/}
                     <ButtonContainer
                       Cart
                       disabled={inCart ? true : false}

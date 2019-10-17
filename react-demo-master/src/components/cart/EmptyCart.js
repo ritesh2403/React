@@ -1,5 +1,5 @@
 import React from "react";
-
+//if nothing added in cart this page is triggered
 export default function EmptyCart() {
   return (
     <div className="container mt-5">

@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Search from './Search'
-//import logo from '.../logo.svg'
 
 class Navbar extends Component {
-
   render() {
+    /*{comman layout for all pages shown in top}*/
     return (
+      /*{ home icon}*/
+
       <nav className="navbar navbar-dark bg-dark">
         <Link to="/">
           <i className="fa fa-home" aria-hidden="true">
             Home
           </i>
         </Link>
+
+        {/* product header*/}
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
             <Link to="/" className="nav-Link">
@@ -20,10 +22,13 @@ class Navbar extends Component {
             </Link>
           </li>
         </ul>
-        <Link to="/cart" className="ml-auto">
-          <i className="fa fa-shopping-cart"> Cart</i>
-        </Link>
+        {/* cart icon*/}
 
+        <div>
+          <Link to="/cart" className="ml-auto">
+            <i className="fa fa-shopping-cart"> Cart</i>
+          </Link>
+        </div>
       </nav>
     );
   }
