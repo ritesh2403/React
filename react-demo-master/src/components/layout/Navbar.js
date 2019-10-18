@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
+ 
+ 
+ 
+ 
   render() {
     /*{comman layout for all pages shown in top}*/
     return (
@@ -24,11 +28,13 @@ class Navbar extends Component {
         </ul>
         {/* cart icon*/}
 
+      
         <div>
           <Link to="/cart" className="ml-auto">
             <i className="fa fa-shopping-cart"> Cart</i>
           </Link>
         </div>
+      
       </nav>
     );
   }

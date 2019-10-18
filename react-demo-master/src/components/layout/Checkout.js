@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Title from './Title'
+import {Link} from 'react-router-dom'
 export class Checkout extends Component {
     render() {
         return (
@@ -9,7 +10,21 @@ export class Checkout extends Component {
                      <div className="row">
                      </div>
                      </div> 
-            </div>
+           
+
+              <Link to="/">
+              <h5 className="col-xs-4 text-center">
+                
+                <button
+                  className="btn btn-outline-success text-uppercase mr-55 mb-3 px-5"
+                  type="button"
+                >Continue Shopping
+                </button>
+                
+              </h5>
+            </Link>
+
+             </div>
         )
     }
 }
