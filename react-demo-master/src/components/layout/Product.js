@@ -98,7 +98,7 @@ const ProductWrapper = styled.div`
   }
 
   .img-container:hover .card-img-top {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   .card-img-top {
@@ -115,8 +115,8 @@ const ProductWrapper = styled.div`
     color: var(--mainwhite);
     border-radius: 0.5 0 0 0;
     font-size: 1.4rem;
-    transform: translate(150%, 125%);
-    transition: all 1s linear;
+    transform: translate(350%, 350%);
+    transition: all 0.7s linear;
   }
 
   .cart-btn-hover {
