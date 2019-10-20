@@ -26,7 +26,7 @@ class Navbar extends Component {
 
         <div>
           <Link to="/cart" className="ml-auto">
-            <i className="fa fa-shopping-cart"> Cart</i>
+            <i className="fa fa-shopping-cart"><span className="label label-success cart-item-count " id='cart-count'>{localStorage['cart']}</span></i>
           </Link>
         </div>
       </nav>

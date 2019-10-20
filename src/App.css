@@ -651,3 +651,9 @@ transition:all 0.5s ease-in-out;
   .div-container-override {
     margin-top: 0px !important;
   }
+
+  .cart-item-count {
+    background: #5cb85c;
+    padding: 4px;
+    border-radius: 13px;
+  }
