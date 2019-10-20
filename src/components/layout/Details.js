@@ -39,7 +39,7 @@ class Details extends Component {
                   <h4 className="text-blue">
                     <strong>Price:{price}</strong>{" "}
                     <span>
-                      <i class="fa fa-inr" aria-hidden="true"></i>
+                      <i className="fa fa-inr" aria-hidden="true"></i>
                     </span>{" "}
                   </h4>
                   <p className="text-capitalize.font-weight-bold mt-3 mb-0">
