@@ -8,7 +8,7 @@ class Productlist extends Component {
     this.state = {
       search: ""
     };
-    
+
   }
   /*{implemented update search fuctionality}*/
   updateSearch(event) {
@@ -16,11 +16,13 @@ class Productlist extends Component {
     this.setState({ search: event.target.value.substr(0, 20) });
   }
 
+
+
   render() {
     return (
       <React.Fragment>
         <div className="py-5">
-          <div className=" container">
+          <div className=" container div-container-override">
             <Title name="Welcome" title="To Store"></Title>
             <div className="row">
               <div className="col-sm-12">
