@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { connect} from 'react-redux';
 import { ProductConsumer } from "../../Context";
+import { setAlert} from '../../actions/alert';
 import PropTypes from "prop-types";
 class Product extends Component {
   render() {
@@ -28,6 +30,7 @@ class Product extends Component {
                   onClick={() => {
                     value.addToCart(id);
                     value.maintainCart(id);
+                    this.props.setAlert('Item added to cart', 'success')
                   }}
                 >
                   {inCart ? (
@@ -67,10 +70,16 @@ Product.propTypes = {
     title: PropTypes.string,
     price: PropTypes.number,
     inCart: PropTypes.bool
-  }).isRequired
+  }).isRequired,
+  setAlert: PropTypes.func.isRequired
 };
 
-export default Product;
+
+export default connect(
+  null,
+  {setAlert}
+)(Product);
+
 
 const ProductWrapper = styled.div`
   .card {

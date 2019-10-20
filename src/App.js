@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Productlist from './components/layout/Productlist';
 import Navbar from './components/layout/Navbar';
+import Alert from './components/layout/Alert';
 import Cart from './components/cart/Cart';
 import Details from './components/layout/Details';
 import Modal from './components/layout/Modal';
@@ -11,25 +12,31 @@ import Checkout from './components/layout/Checkout';
 
 import './App.css';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 const App = () => (
-	<Router>
-	  <Fragment>
-	    <Navbar />
+	<Provider store={store}>
+		<Router>
+		  <Fragment>
+		    <Navbar />
 
-	    <section className='container'>
-	      <Switch>
-		  <Route exact path='/' component={Productlist} />
-		  <Route exact path='/details' component={Details} />
-          <Route exact path='/cart' component={Cart} />
-		  <Route exact path='/checkout' component={Checkout}/>
-	      </Switch>
-		  <Modal/>
-		  
-	    </section>
+		    <section className='container'>
+		      <Alert />
+		      <Switch>
+			  <Route exact path='/' component={Productlist} />
+			  <Route exact path='/details' component={Details} />
+	          <Route exact path='/cart' component={Cart} />
+			  <Route exact path='/checkout' component={Checkout}/>
+		      </Switch>
+			  <Modal/>
 
-	  </Fragment>
+		    </section>
 
-  </Router>
+		  </Fragment>
+
+	  </Router>
+  </Provider>
 );
 
 
