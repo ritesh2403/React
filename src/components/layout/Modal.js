@@ -29,7 +29,7 @@ class Modal extends Component {
                       <img src={img} className="img-fluid" alt="product"></img>
                       <h5>{title}</h5>
                       <h5 className="text-muted">
-                        <i class="fa fa-inr" aria-hidden="true"></i> {price}
+                        <i className="fa fa-inr" aria-hidden="true"></i> {price}
                       </h5>
 
                       {/*Rendering between home page and modal page using link */}

@@ -113,7 +113,7 @@ class ProductProvider extends Component {
     }
     this.setState(
       () => {
-        return { 
+        return {
           products: [...tempCart]
            };
       },
@@ -175,14 +175,14 @@ class ProductProvider extends Component {
     });
   };
   /* tester=()=>{
- 
+
          console.log('state product:',this.state.products[0].inCart);
          console.log('data product:',this.state.storeProducts[0].inCart);
- 
+
          const tempProducts=[...this.state.products];
          tempProducts[0].inCart=true
          this.setState(()=>{
- 
+
              return {products:tempProducts}
          },()=>{
              console.log('state product:',this.state.products[0].inCart);

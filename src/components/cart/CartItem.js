@@ -48,13 +48,13 @@ export default function CartItem({ item, value }) {
 
       <div className="col-10 mx-auto col-lg-2">
         <div className="cart-icon" onClick={() => removeitem(id)}>
-          <i class="fa fa-trash" aria-hidden="true"></i>
+          <i className="fa fa-trash" aria-hidden="true"></i>
         </div>
       </div>
 
       <div className="col-10 mx-auto col-lg-2">
         <strong>
-          item total:<i class="fa fa-inr" aria-hidden="true"></i>
+          item total:<i className="fa fa-inr" aria-hidden="true"></i>
           {total}
         </strong>
       </div>

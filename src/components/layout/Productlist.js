@@ -48,7 +48,6 @@ class Productlist extends Component {
               <ProductConsumer>
                 {value => {
                   return value.products.map(product => {
-                    console.log(this.state.search);
                     if (
                       /* searching product by their title*/
                       product.title

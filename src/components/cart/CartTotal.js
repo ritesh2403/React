@@ -23,7 +23,7 @@ export default function CartTotal({ value }) {
             <h5>
               <span className="text-title">subtotal:</span>
               <strong>
-                <i class="fa fa-inr" aria-hidden="true"></i> {CartSubTotal}
+                <i className="fa fa-inr" aria-hidden="true"></i> {CartSubTotal}
               </strong>
             </h5>
 
@@ -32,7 +32,7 @@ export default function CartTotal({ value }) {
             <h5>
               <span className="text-title">tax:</span>
               <strong>
-                <i class="fa fa-inr" aria-hidden="true"></i> {CartTax}
+                <i className="fa fa-inr" aria-hidden="true"></i> {CartTax}
               </strong>
             </h5>
 
@@ -41,7 +41,7 @@ export default function CartTotal({ value }) {
             <h5>
               <span className="text-title">total:</span>
               <strong>
-                <i class="fa fa-inr" aria-hidden="true"></i> {CartTotal}
+                <i className="fa fa-inr" aria-hidden="true"></i> {CartTotal}
               </strong>
             </h5>
 
@@ -54,7 +54,7 @@ export default function CartTotal({ value }) {
                   type="button"
                   onClick={() => clearCart()}
                 >
-                  <i class="fa fa-money" aria-hidden="true"></i>Checkout
+                  <i className="fa fa-money" aria-hidden="true"></i>Checkout
                 </button>
               </h5>
             </Link>
