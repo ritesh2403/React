@@ -37,8 +37,7 @@ class Product extends Component {
                     <p className="text-capitalize mb-0" disabled>
                       {" "}
                       in cart
-                    </p>
-                  ) : (
+                    </p>):(
                     <i className="fa fa-shopping-cart"></i>
                   )}
                 </button>
