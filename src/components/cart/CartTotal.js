@@ -10,7 +10,7 @@ export default function CartTotal({ value }) {
           <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
             <Link to="/">
               <button
-                className="btn btn-outline-danger text-uppercase mb-3 px-5"
+                className="btn btn-outline-danger text-uppercase mb-3 px-5 btn-danger"
                 type="button"
                 onClick={() => clearCart()}
               >
@@ -50,7 +50,7 @@ export default function CartTotal({ value }) {
               <h5>
                 <span className="text-title"></span>
                 <button
-                  className="btn btn-outline-success text-uppercase mb-3 px-5"
+                  className="btn btn-outline-success text-uppercase mb-3 px-5 btn-success"
                   type="button"
                   onClick={() => clearCart()}
                 >
